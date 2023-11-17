@@ -1,0 +1,102 @@
+:root {
+  --ball-height: 60rem;
+}
+
+body {
+  background: #ee7ff8;
+}
+
+main {
+  padding: 1rem 3rem;
+}
+
+a {
+  color: #222;
+}
+
+.squared-brick {
+  background-color: #ee7ff8;
+}
+
+main .squared-o {
+  width: calc(var(--ball-height) / 1.7);
+  height: calc(var(--ball-height) / 1.7);
+}
+
+main .squared-brick {
+  width: calc((var(--ball-height)) / 5);
+  height: calc((var(--ball-height)) / 5);
+}
+
+.btn-about {
+  color: #222;
+  background-color: #ee7ff8;
+  border: 1px solid #222;
+}
+
+.left-container {
+  width: 40%;
+}
+
+.left-container h1 {
+  font-size: 4rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.left-container p {
+  font-size: 1rem;
+  font-family: var(--font-familly3);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1105px) {
+  :root {
+    --ball-height: 50rem;
+  }
+
+  .left-container h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .left-container p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  :root {
+    --ball-height: 25rem;
+  }
+
+  .right-container {
+    justify-content: center;
+  }
+
+  .left-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .left-container h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .left-container p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

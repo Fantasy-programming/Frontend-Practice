@@ -1,0 +1,100 @@
+/* TODO: make the underline look like the desin */
+
+a {
+  color: #222222;
+}
+
+main {
+  padding: 3rem 3rem;
+}
+
+/* Hero sections */
+
+.hero-left,
+.hero-right {
+  width: 50%;
+  height: 70vh;
+}
+
+.hero-left {
+  font-size: var(--home-big-font-size);
+  text-transform: uppercase;
+  line-height: calc(var(--home-big-font-size) * 1.4);
+  letter-spacing: 0.1rem;
+}
+
+.hero-right {
+  font-size: 2.5rem;
+}
+
+/* Custom Hero Square*/
+
+main .squared-o {
+  width: calc(var(--home-big-font-size) + 1rem);
+  height: calc(var(--home-big-font-size) + 1rem);
+}
+
+main .squared-brick {
+  width: calc((var(--home-big-font-size) + 1rem) / 3);
+  height: calc((var(--home-big-font-size) + 1rem) / 3);
+}
+
+/* button */
+
+.btn-home {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+}
+
+.btn-home:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+}
+
+.btn-home:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+}
+
+@media screen and (max-width: 1370px) {
+  :root {
+    --home-big-font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  :root {
+    --home-big-font-size: 4rem;
+  }
+
+  .hero-right {
+    font-size: 2rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 50%;
+    height: 50vh;
+  }
+
+  main {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    height: auto;
+    justify-content: left;
+  }
+
+  .hero-right-text {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

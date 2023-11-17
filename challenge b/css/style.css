@@ -1,0 +1,162 @@
+:root {
+  --black: #000000;
+  --fonts: "Fortezza Condensed", serif;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: "Fortezza Condensed";
+  src: url("../fonts/FortezzaCondensed.woff2") format("woff2"), url("../fonts/FortezzaCondensed.woff") format("woff"),
+    url("../fonts/FortezzaCondensed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  box-sizing: inherit;
+  background-color: var(--black);
+  font-family: var(--fonts);
+  font-style: normal;
+  font-display: swap;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+h2 {
+  font-size: 8rem;
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+img {
+  display: inline-block;
+  width: 120px;
+  height: 7rem;
+  filter: grayscale(100%);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 3rem;
+  align-items: center;
+  flex-shrink: 0;
+  max-height: 5rem;
+}
+
+header img {
+  width: 20px;
+}
+
+.dot {
+  background-color: var(--white);
+  width: 20px;
+  height: 20px;
+  border-radius: 360%;
+}
+
+/* MAIN */
+
+section:nth-child(2n),
+section:nth-child(2n + 1) {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 7px;
+  align-items: center;
+}
+
+section:nth-child(2n) {
+  justify-content: flex-end;
+  padding-right: 8rem;
+}
+
+section:nth-child(2n + 1) {
+  justify-content: flex-start;
+  padding-left: 8rem;
+}
+
+#Myths h2 {
+  order: 1;
+}
+
+section,
+header {
+  border-bottom: 2px solid white;
+}
+
+/* Footer */
+
+footer {
+  min-height: 8rem;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+}
+
+footer div {
+  border-bottom: 2px solid white;
+  width: 1rem;
+}
+
+/* Animations & Style */
+
+@keyframes gradientLeftAnimation {
+  0% {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+  }
+  25% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 34%, rgba(255, 255, 255, 0.25) 97%);
+  }
+  50% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 34%, rgba(255, 255, 255, 0.5) 97%);
+  }
+  75% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 34%, rgba(255, 255, 255, 0.75) 97%);
+  }
+  100% {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 34%, rgba(255, 255, 255, 1) 97%);
+  }
+}
+
+@keyframes gradientRightAnimation {
+  0% {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+  }
+  25% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.25) 34%, rgba(255, 255, 255, 0.25) 97%);
+  }
+  50% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 34%, rgba(255, 255, 255, 0.5) 97%);
+  }
+  75% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.75) 34%, rgba(255, 255, 255, 0.75) 97%);
+  }
+  100% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 34%, rgba(255, 255, 255, 1) 97%);
+  }
+}
+
+.gradient-left {
+  animation: gradientLeftAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.gradient-right {
+  animation: gradientRightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Med-Ed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main class="flex flex-col space-between">
+      <!-- Navbar Section -->
+      <header class="flex space-between">
+        <div class="flex space-between g-5 pl-1 align-center">
+          <h2 class="text-white">Med + Med</h2>
+          <nav>
+            <ul class="space-around g-2 flex align-center">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Procedures</a></li>
+              <li><a href="#">Skincare</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex space-around align-center center g-1">
+          <div class="btn startbtn flex align-center center g-1">
+            <span>Start program</span>
+            <div class="pin"></div>
+          </div>
+          <div class="burger"><span class="bx bx-menu-alt-left"></span></div>
+        </div>
+      </header>
+      <div class="overlay">
+        <div class="overlay-1 pl-1 flex g-1 align-center">
+          <div class="radiant-border">
+            <div class="med-btn">Medical</div>
+          </div>
+          <span class="text-muted">Stay healthy with Med + Med</span>
+        </div>
+        <div class="overlay-2 flex align-center center"><h1 class="full f-4 f-light pl-1">Meditation</h1></div>
+        <div class="overlay-3 flex align-center center"><h1 class="full f-4 f-light pl-1">and Medicine</h1></div>
+        <div class="btn startbtn absolute flex align-center center g-1" id="start">
+          <span>Start program</span>
+          <div class="pin"></div>
+        </div>
+      </div>
+      <div class="absolute mediabox-container">
+        <div class="mediabox">
+          <div class="playbtn text-white flex center align-center">
+            <span class="bx bx-play"></span>
+          </div>
+        </div>
+      </div>
+      <div class="absolute infobox">
+        <h3 class="mb-1">Stay healthy <span class="block">with Med + Med</span></h3>
+        <p>
+          Meditation is a tool for the mind to achieve different states of being. Out of thousands of types of
+          meditation, we offer a core fo the most simple and effective practice
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

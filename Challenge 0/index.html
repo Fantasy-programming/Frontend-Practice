@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="flex container">
+      <div class="ball-container flex align-center d-none mobile center">
+        <div class="ball small-ball"></div>
+      </div>
+      <!-- left sidebar -->
+      <div class="flex flex-col row blur leftbar space-between">
+        <nav>
+          <h1>
+            <span class="fa-solid fa-circle"></span>
+            Untitled UI
+          </h1>
+        </nav>
+        <main class="flex flex-col">
+          <div class="welcome-text">
+            <h2 class="bold m-1">Welcome back</h2>
+            <p class="text-muted">Welcome back! Please enter your details</p>
+          </div>
+          <div class="flex space-around flex-col">
+            <form>
+              <div class="flex flex-col input-container m-1">
+                <label for="email" class="placeholder">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+              </div>
+              <div class="flex flex-col input-container m-1">
+                <label for="password" class="placeholder">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" />
+              </div>
+              <div class="flex space-between m-1">
+                <div><input type="checkbox" name="remember" id="remember" /> <span>Remember for 30 days</span></div>
+                <a href="#" target="_blank" rel="noopener noreferrer">Forgot password</a>
+              </div>
+              <button type="submit" class="btn btn-login m-1">Sign In</button>
+            </form>
+            <button class="btn-google btn m-1 flex center align-center">
+              <span class="fa-brands fa-google"></span>Signin with google
+            </button>
+            <p class="text-center text-muted">Don't have an account <a href="#">signup</a></p>
+          </div>
+        </main>
+        <footer class="text-muted">@untitled 2077</footer>
+      </div>
+      <!-- right sidebar -->
+      <div class="flex flex-col rightbar space-between">
+        <div class="row"></div>
+        <div class="ball-container flex align-center center">
+          <div class="ball big-ball"></div>
+        </div>
+        <div class="blur row"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+body {
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+/* Top Container */
+
+.top-container {
+  gap: 20rem;
+  padding: 1rem 3rem;
+}
+
+.top-container h1 {
+  text-transform: uppercase;
+  font-size: var(--stories-big-font-size);
+}
+
+.top-container .support p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-family: var(--font-familly3);
+}
+
+/*button */
+
+.btn-stories {
+  color: #fff;
+  background-color: #0000;
+  border: 1px solid #ffffff;
+}
+
+/* Custom Hero Square*/
+
+.squared-o {
+  background-color: #ffff;
+}
+
+.squared-brick {
+  background-color: #000;
+}
+
+main .squared-o {
+  width: calc(var(--stories-big-font-size) / 1.7);
+  height: calc(var(--stories-big-font-size) / 1.7);
+}
+
+main .squared-brick {
+  width: calc((var(--stories-big-font-size)) / 5);
+  height: calc((var(--stories-big-font-size)) / 5);
+}
+
+/* Custom Cards */
+
+.cards {
+  height: 24rem;
+  width: 24rem;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.cards:first-child {
+  background-color: #f7d14c;
+  background-image: url("../images/pngwing.com\(3\).png");
+  background-size: cover;
+}
+
+.cards:nth-child(2) {
+  background-color: #faddfb;
+  background-image: url("../images/pngwing.com\(4\).png");
+  background-size: cover;
+}
+
+.cards:nth-child(3) {
+  background-color: #5ea5f7;
+}
+
+.cards:nth-child(4) {
+  background-color: #ed7447;
+  background-image: url("../images/pngwing.com\(5\).png");
+  background-size: cover;
+}
+
+@media screen and (max-width: 1180px) {
+  :root {
+    --stories-big-font-size: 6rem;
+  }
+
+  .cards {
+    height: 20rem;
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+
+  .top-container .support p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  :root {
+    --stories-big-font-size: 5rem;
+  }
+
+  .cards {
+    height: 16rem;
+    width: 16rem;
+    font-size: 1rem;
+  }
+
+  .top-container .support p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  :root {
+    --stories-big-font-size: 5rem;
+  }
+
+  .cards {
+    height: 16rem;
+    width: 16rem;
+    font-size: 1rem;
+  }
+
+  .top-container {
+    gap: 2rem;
+    padding: 1rem 2rem;
+    flex-direction: column;
+  }
+
+  .top-container p {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+  }
+
+  .cards {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .cards:not(:first-child) {
+    display: none;
+  }
+
+  .top-container .support p {
+    font-size: 0.6rem;
+  }
+}

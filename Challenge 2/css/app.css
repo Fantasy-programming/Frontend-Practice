@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Polatec3";
+  src: url("../fonts/Fontspring-DEMO-polatec3-regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Polatec3";
+  src: url("../fonts/Fontspring-DEMO-polatec3-italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Polatec3";
+  src: url("../fonts/Fontspring-DEMO-polatec3-light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Polatec3";
+  src: url("../fonts/Fontspring-DEMO-polatec3-thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Polatec3";
+  src: url("../fonts/Fontspring-DEMO-polatec3-bold.ttf");
+  font-style: bold;
+}
+
+:root {
+  --about-color: #ee7ff8;
+  --font-familly1: "Polatec3";
+  --home-big-font-size: 6rem;
+  --stories-big-font-size: 8rem;
+  --font-familly2: "Poppins", sans-serif;
+  --font-familly3: "Inter", sans-serif;
+  font-weight: normal;
+}
+
+/* Reset CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-familly1);
+}
+
+ul {
+  list-style: none;
+  display: block;
+}
+
+a {
+  font-size: 1.5rem;
+}
+
+.warning-icon {
+  font-size: 2rem;
+  transform: rotate(180deg);
+}
+
+/* Custom square */
+
+.squared-o {
+  position: relative;
+  display: inline-flex;
+  border-radius: 100%;
+  background-color: black;
+}
+
+.squared-brick {
+  position: absolute;
+  background-color: white;
+}
+
+nav .squared-o {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+nav .squared-brick {
+  width: calc(2.5rem / 3);
+  height: calc(2.5rem / 3);
+}
+
+/* buttons */
+
+.btn {
+  padding: 0.5rem 3.5rem;
+  border-radius: 10rem;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+  user-select: none;
+  width: auto;
+  -webkit-user-select: none;
+}
+
+.btn:focus-visible {
+  transition: box-shadow 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 960px) {
+  .navlinks {
+    display: none;
+  }
+}
