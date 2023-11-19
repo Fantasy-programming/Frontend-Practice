@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 50px 0px;
+  pointer-events: none;
+}
+
+hr {
+  width: 50%;
+  height: 3px;
+  background-color: #000;
+  border: none;
+  margin: 20px auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  /* caret-color: transparent; */
+  border: 3.5px solid #cccccc;
+
+  /* outline: none; */
+}
+
+.Wordle-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px 15px;
+}
+
+.special {
+  display: none;
+}
+
+@keyframes believer {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #cccccc;
+  }
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}

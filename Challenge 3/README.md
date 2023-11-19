@@ -1,7 +1,7 @@
-# Frontend Challenge 2
+# Frontend Challenge 3
 
 Source:
-Fonts Used: PolateC3
+Fonts Used: Inter
 Responsive: Yes
 Accessible: No
 
@@ -17,4 +17,4 @@ Accessible: No
 
 ### Tech Used
 
-- Vanilla Stack
+- Bootstrap

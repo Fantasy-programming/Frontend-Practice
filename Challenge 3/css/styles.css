@@ -1,0 +1,49 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: #fff !important;
+}
+
+.wrapper {
+  background: url("../img/image2.jpeg") no-repeat center center/cover;
+  clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 77%, 0% 50%);
+}
+
+.hero-header {
+  font-size: 4rem;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.about-section {
+  margin-bottom: 10rem;
+}
+
+.floating-box {
+  box-shadow: 0 3px 10px rgb(219, 62, 68 / 0.5) !important;
+  bottom: 200px;
+  left: 500px;
+  z-index: 2;
+}
+
+.floating-box-inners {
+  padding: 2rem 5rem 1rem;
+}
+
+.logo {
+  width: 2.5rem;
+  display: inline-block;
+  height: 2.5rem;
+  background-color: #e23d3a;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-30deg);
+}

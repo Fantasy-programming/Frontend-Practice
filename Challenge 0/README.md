@@ -14,3 +14,7 @@ Accessible: No
 ![[shots/1.jpg]]
 ![[shots/2.jpg]]
 ![[shots/3.jpg]]
+
+### Tech Used
+
+- Vanilla Stack
