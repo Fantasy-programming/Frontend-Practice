@@ -1,0 +1,310 @@
+:root {
+  --primary-color: hsl(0, 0%, 13%);
+  --secondary-color: hsl(60, 86%, 97%);
+  --font-color: hsl(68, 36%, 96%);
+  --muted-font: hsl(60, 1%, 39%);
+  --font-familly1: "Inter", sans-serif;
+  --font-familly2: "Tai Heritage Pro", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  font-family: var(--font-familly1);
+}
+
+.container {
+  overflow: hidden;
+}
+
+/* Title section */
+
+.title {
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title h1 {
+  font-size: 10rem;
+  font-family: var(--font-familly2);
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 10rem;
+
+  margin: 0;
+
+  display: inline-block;
+
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  animation: floatText 45s infinite linear;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.title h1:hover {
+  animation-play-state: paused;
+}
+
+.title img {
+  height: 3rem;
+}
+
+.title span {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  line-height: 1em;
+}
+
+/* info section */
+
+.info {
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  border-top: 2px solid var(--muted-font);
+  padding: 10px 0px;
+  margin: 0 50px;
+  justify-content: space-between;
+
+  display: flex;
+  gap: 200px;
+}
+
+.info span:last-child {
+  text-align: right;
+}
+
+/* Badges section */
+
+.badge-container {
+  margin: 0 50px;
+  height: calc(80vh - 200px - 2rem - 50px);
+
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.badge-container span {
+  color: var(--secondary-color);
+
+  width: 200px;
+
+  position: absolute;
+  display: inline-block;
+
+  transform: rotate(-25deg);
+}
+
+.badge-container .badge1 {
+  filter: url(#round);
+}
+
+.badge7::before {
+  content: "";
+  display: block;
+  padding-top: 86.6%;
+  background: currentColor;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    90.21% 58%,
+    96.19% 69.13%,
+    84.09% 72.78%,
+    85.36% 85.36%,
+    72.78% 84.09%,
+    69.13% 96.19%,
+    58% 90.21%,
+    50% 100%,
+    42% 90.21%,
+    30.87% 96.19%,
+    27.22% 84.09%,
+    14.64% 85.36%,
+    15.91% 72.78%,
+    3.81% 69.13%,
+    9.79% 58%,
+    0% 50%,
+    9.79% 42%,
+    3.81% 30.87%,
+    15.91% 27.22%,
+    14.64% 14.64%,
+    27.22% 15.91%,
+    30.87% 3.81%,
+    42% 9.79%,
+    50% 0%,
+    58% 9.79%,
+    69.13% 3.81%,
+    72.78% 15.91%,
+    85.36% 14.64%,
+    84.09% 27.22%,
+    96.19% 30.87%,
+    90.21% 42%
+  );
+}
+
+.badge1::before {
+  content: "";
+  display: block;
+  padding-top: 86.6%;
+  background: currentColor;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    85.11% 64.54%,
+    85.36% 85.36%,
+    64.54% 85.11%,
+    50% 100%,
+    35.46% 85.11%,
+    14.64% 85.36%,
+    14.89% 64.54%,
+    0% 50%,
+    14.89% 35.46%,
+    14.64% 14.64%,
+    35.46% 14.89%,
+    50% 0%,
+    64.54% 14.89%,
+    85.36% 14.64%,
+    85.11% 35.46%
+  );
+}
+
+span.badge2,
+span.badge3,
+span.badge4,
+span.badge5,
+span.badge6 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: 200px;
+  height: 50px;
+  padding: 1.8rem 7rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* rounded spiky badge */
+span.badge1 {
+  top: 140px;
+  left: 890px;
+  /* top: 130px;
+  left: 880px; */
+  transform: rotate(10deg);
+}
+
+/* instagram badge */
+
+span.badge2 {
+  top: 105px;
+  left: 505px;
+  transform: rotate(-15deg);
+}
+
+/* Behance badge */
+
+span.badge3 {
+  top: 170px;
+  left: 655px;
+  transform: rotate(15deg);
+}
+
+/* Dribble badge */
+
+span.badge4 {
+  top: 120px;
+  left: 720px;
+  transform: rotate(20deg);
+}
+
+/*Facebook badge */
+span.badge5 {
+  top: 265px;
+  left: 696px;
+
+  transform: rotate(-20deg);
+}
+
+/*linkedin badge */
+span.badge6 {
+  top: 270px;
+  transform: rotate(-8deg);
+  left: 290px;
+}
+
+/* Spyky badge */
+span.badge7 {
+  z-index: 2;
+  left: 310px;
+  height: 200px;
+  top: 75px;
+}
+
+/* rounded badge */
+
+span.badge8 {
+  left: 510px;
+  top: 170px;
+  height: 180px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  width: 180px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  transform: rotate(15deg);
+}
+
+.badge-round-text {
+  position: relative;
+  top: -170px;
+  left: 30px;
+}
+
+span svg {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+/* Email section */
+
+.email {
+  color: var(--muted-font);
+  font-family: var(--font-familly2);
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes floatText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
