@@ -1,10 +1,10 @@
 let total = 0;
 let pnum = 0;
 let poperation = 0;
+let screen = document.querySelector(".box1");
 
-document.querySelector(".calculator").addEventListener("click", () => {
+document.querySelector(".calculator").addEventListener("click", (event) => {
   if (event.target.nodeName === "BUTTON") {
-    let screen = document.querySelector(".box1");
     let trigger = event.target.innerHTML;
 
     if (trigger === "=") {
@@ -39,23 +39,23 @@ document.querySelector(".calculator").addEventListener("click", () => {
   }
 });
 
-sum = (num1, num2) => {
+const sum = (num1, num2) => {
   return num1 + num2;
 };
 
-sub = (num1, num2) => {
+const sub = (num1, num2) => {
   return num1 - num2;
 };
 
-mul = (num1, num2) => {
+const mul = (num1, num2) => {
   return num1 * num2;
 };
 
-div = (num1, num2) => {
+const div = (num1, num2) => {
   return num1 / num2;
 };
-3
-operation = (sign) => {
+
+const operation = (sign) => {
   switch (sign) {
     case "+":
       return sum;
@@ -70,7 +70,7 @@ operation = (sign) => {
   }
 };
 
-clear = () => {
+const clear = () => {
   document.querySelector(".box1").innerHTML = 0;
   pnum = 0;
   poperation = 0;

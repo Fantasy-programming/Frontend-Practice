@@ -29,10 +29,9 @@ main {
 }
 
 .radiant-border {
-  border: 5px;
   color: #000;
   background: #fff;
-  background-clip: padding-box; /* !importanté */
+  background-clip: padding-box;
   border: solid 5px transparent;
   border-radius: 1em;
 }

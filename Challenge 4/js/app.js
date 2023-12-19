@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let startLetterIndent =
         parseInt(window.getComputedStyle(scrollingText.querySelector(".scrolling-text-content")).fontSize, 10) / 4.8;
       startLetterIndent = Math.round(startLetterIndent);
-      var scrollAmountBoundary = Math.abs(window.innerWidth - scrollingTextWidth);
-      var transformAmount = 0;
-      var leftBound = 0;
-      var rightBound = scrollAmountBoundary;
-      var transformDirection = container.classList.contains("left-to-right") ? -1 : 1;
-      var transformSpeed = 200;
+      let scrollAmountBoundary = Math.abs(window.innerWidth - scrollingTextWidth);
+      let transformAmount = 0;
+      let leftBound = 0;
+      let rightBound = scrollAmountBoundary;
+      let transformDirection = container.classList.contains("left-to-right") ? -1 : 1;
+      let transformSpeed = 200;
 
       // Read transform speed
       if (container.getAttribute("speed")) {
@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
       container.style.height = scrollingTextHeight + "px";
 
       function getActiveScrollingText(direction) {
-        var firstScrollingText = container.querySelector(".scrolling-text:nth-child(1)");
-        var secondScrollingText = container.querySelector(".scrolling-text:nth-child(2)");
+        const firstScrollingText = container.querySelector(".scrolling-text:nth-child(1)");
+        const secondScrollingText = container.querySelector(".scrolling-text:nth-child(2)");
 
-        var firstScrollingTextLeft = parseInt(window.getComputedStyle(firstScrollingText).left, 10);
-        var secondScrollingTextLeft = parseInt(window.getComputedStyle(secondScrollingText).left, 10);
+        const firstScrollingTextLeft = parseInt(window.getComputedStyle(firstScrollingText).left, 10);
+        const secondScrollingTextLeft = parseInt(window.getComputedStyle(secondScrollingText).left, 10);
 
         if (direction === "left") {
           return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       window.addEventListener("wheel", function (e) {
-        var delta = e.deltaY;
+        let delta = e.deltaY;
 
         if (delta > 0) {
           // going down
@@ -76,12 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Boundaries
         if (transformAmount < leftBound) {
-          var activeText = getActiveScrollingText("left");
+          let activeText = getActiveScrollingText("left");
           activeText.style.left = Math.round(leftBound - scrollingTextWidth - startLetterIndent) + "px";
           leftBound = parseInt(window.getComputedStyle(activeText).left, 10);
           rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
         } else if (transformAmount > rightBound) {
-          var activeText = getActiveScrollingText("right");
+          let activeText = getActiveScrollingText("right");
           activeText.style.left =
             Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + "px";
           rightBound += scrollingTextWidth + startLetterIndent;

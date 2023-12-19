@@ -195,6 +195,7 @@ main {
   .leftbar {
     width: 100%;
     margin-top: 2rem;
+    backdrop-filter: blur(10px);
   }
 
   .ball-container {
@@ -217,9 +218,5 @@ main {
 
   .welcome-text {
     text-align: center;
-  }
-
-  .leftbar {
-    backdrop-filter: blur(10px);
   }
 }

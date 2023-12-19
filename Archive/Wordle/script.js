@@ -12,7 +12,7 @@ document.addEventListener("keydown", async (event) => {
 
   if (count === 5 && event.key === "Enter") {
     event.preventDefault();
-    let correct = await getword();
+    const correct = await getword();
     check = checkword(word, correct);
     if (check) {
       animate("correct");
@@ -28,12 +28,8 @@ document.addEventListener("keydown", async (event) => {
     event.preventDefault();
     box.value = event.key.toUpperCase();
     count++;
-    console.log(count);
-    console.log(box);
-    console.log(box.nextElementSibling);
   } else if (box.nextElementSibling && count < 5 && !specialKey(event.key)) {
     word += event.key;
-    // console.log(word);
     event.preventDefault();
     box.value = event.key.toUpperCase();
     box = box.nextElementSibling;

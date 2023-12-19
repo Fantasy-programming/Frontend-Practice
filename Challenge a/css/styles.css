@@ -45,22 +45,6 @@ body {
   color: var(--font-color);
 }
 
-/* body::before,
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 9%;
-}
-
-body::before {
-  background: #231f1e;
-  filter: url(#noiseFilter);
-} */
 
 /* Top Navigation */
 
